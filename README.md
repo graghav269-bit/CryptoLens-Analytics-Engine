@@ -1,223 +1,285 @@
-CryptoLens — Cryptocurrency Analytics & Forecasting System
+# CryptoLens - Cryptocurrency Analytics & Forecasting System
 
-📌 Overview
+## Overview
 
-CryptoLens is an intelligent cryptocurrency analytics platform that combines real-time market tracking, advanced data analysis, machine learning forecasting, and social sentiment analysis into a single interactive dashboard.
+CryptoLens is a comprehensive cryptocurrency analytics platform designed to provide real-time market monitoring, advanced data visualization, machine learning-based forecasting, and sentiment analysis.
 
-The system enables users to monitor cryptocurrency markets, visualize trends, generate forecasts, and analyze public sentiment from news and social media sources.
+The platform helps users understand market trends, analyze historical cryptocurrency data, generate future price predictions, and evaluate market sentiment through an interactive dashboard built with Streamlit.
 
-This project was developed as an MCA major project to demonstrate the integration of Data Analytics, Machine Learning, NLP, and Interactive Dashboard Technologies.
+---
 
-🎯 Objectives
-Monitor live cryptocurrency market prices.
-Perform exploratory data analysis on historical market data.
-Generate future price forecasts using machine learning models.
-Analyze social sentiment from crypto-related content.
-Compare multiple forecasting models.
-Provide a professional and interactive analytics dashboard.
-🚀 Key Features
-💹 Live Market Tracking
-Real-time cryptocurrency price monitoring
-Binance API integration
-Bitcoin (BTC), Ethereum (ETH), Solana (SOL)
-Market movement analysis
-24-hour change tracking
-📊 Interactive Data Analysis
-Correlation Heatmaps
-Distribution Histograms
-Rolling Volatility Analysis
-Trend Visualization
-Data Exploration Dashboard
-🤖 Predictive AI Forecasting
+## Features
 
-Supports multiple forecasting techniques:
+### Live Market Tracking
+- Real-time cryptocurrency price monitoring
+- Binance API integration
+- Bitcoin (BTC), Ethereum (ETH), and Solana (SOL) support
+- 24-hour market movement analysis
+- Price trend visualization
 
-Facebook Prophet
-Time-series forecasting
-Trend analysis
-Future price prediction
-ARIMA
-Statistical forecasting
-Seasonal trend analysis
-LSTM Neural Network
-Deep learning-based forecasting
-Sequential pattern learning
-Advanced prediction capability
-🗣️ Social Sentiment Analysis
-News sentiment classification
-NLP-based text processing
-Positive, Negative, Neutral sentiment scoring
-Market sentiment monitoring
-⚖️ Model Comparison
-Forecast comparison
-Accuracy evaluation
-Performance metrics visualization
-🏗️ System Architecture
+### Interactive Data Analysis
+- Correlation heatmaps
+- Distribution histograms
+- Volatility analysis
+- Trend exploration
+- Interactive charts and graphs
 
-                 ┌─────────────────┐
-                 │   Binance API   │
-                 └────────┬────────┘
-                          │
-                          ▼
-               ┌─────────────────────┐
-               │ Data Collection     │
-               └────────┬────────────┘
-                        │
-        ┌───────────────┼────────────────┐
-        ▼               ▼                ▼
-┌────────────┐  ┌─────────────┐  ┌─────────────┐
-│ EDA Module │  │ Forecasting │  │ Sentiment   │
-│            │  │ Models      │  │ Analysis    │
-└─────┬──────┘  └──────┬──────┘  └──────┬──────┘
-      │                │                │
-      └────────────────┼────────────────┘
-                       ▼
-           ┌─────────────────────┐
-           │ Streamlit Dashboard │
-           └─────────────────────┘
-           
-🛠️ Technologies Used
-Frontend
-Streamlit
-HTML
-CSS
-Backend
-Python
-Data Processing
-Pandas
-NumPy
-Visualization
-Plotly
-Matplotlib
-Seaborn
-Machine Learning
-Facebook Prophet
-ARIMA
-TensorFlow/Keras (LSTM)
-Scikit-Learn
-Natural Language Processing
-TextBlob
-NLTK
-VaderSentiment
-APIs
-Binance API
-News API (Optional)
+### Predictive AI Forecasting
+- Facebook Prophet forecasting model
+- ARIMA time-series forecasting
+- LSTM deep learning forecasting
+- Future price prediction
+- Model performance evaluation
 
-📂 Project Structure
+### Social Sentiment Analysis
+- News sentiment analysis
+- NLP-based text processing
+- Positive, Negative, and Neutral sentiment classification
+- Crypto market sentiment monitoring
+
+### Model Comparison
+- Compare forecasting models
+- Performance metric evaluation
+- Accuracy comparison
+- Visual model assessment
+
+---
+
+## Technologies Used
+
+### Frontend
+- Streamlit
+- HTML
+- CSS
+
+### Backend
+- Python
+
+### Data Processing
+- Pandas
+- NumPy
+
+### Data Visualization
+- Plotly
+- Matplotlib
+- Seaborn
+
+### Machine Learning
+- Facebook Prophet
+- ARIMA
+- TensorFlow
+- Keras
+- Scikit-Learn
+
+### Natural Language Processing
+- NLTK
+- TextBlob
+- VADER Sentiment
+
+### APIs
+- Binance API
+- News API
+
+---
+
+## System Architecture
+
+Data Collection Layer
+        |
+        v
+Cryptocurrency APIs
+        |
+        v
+Data Processing & Cleaning
+        |
+        +-----------------------+
+        |                       |
+        v                       v
+EDA Module             Sentiment Module
+        |
+        v
+Forecasting Models
+(Prophet, ARIMA, LSTM)
+        |
+        v
+Streamlit Dashboard
+        |
+        v
+User Interface
+
+---
+
+## Project Structure
+
 CryptoLens/
-│
+
 ├── app.py
-│
+
 ├── pages/
 │   ├── Live_Prices.py
 │   ├── EDA.py
 │   ├── Forecasting.py
 │   ├── Sentiment.py
 │   └── Model_Comparison.py
-│
+
 ├── utils/
 │   ├── data_loader.py
 │   ├── forecasting.py
 │   ├── sentiment.py
 │   └── theme.py
-│
-├── assets/
-│   ├── icons/
-│   └── images/
-│
+
 ├── data/
 │   └── crypto_data.csv
-│
+
 ├── models/
-│   ├── arima_model.pkl
 │   ├── prophet_model.pkl
+│   ├── arima_model.pkl
 │   └── lstm_model.h5
-│
+
+├── assets/
+
 ├── requirements.txt
-│
+
 └── README.md
-⚙️ Installation
-1. Clone Repository
+
+---
+
+## Installation
+
+1. Clone the repository
+
 git clone https://github.com/yourusername/CryptoLens.git
-2. Navigate to Project
+
+2. Navigate to the project directory
+
 cd CryptoLens
-3. Create Virtual Environment
+
+3. Create a virtual environment
+
 python -m venv venv
-4. Activate Environment
+
+4. Activate the virtual environment
 
 Windows:
-
 venv\Scripts\activate
 
 Linux/Mac:
-
 source venv/bin/activate
-5. Install Dependencies
+
+5. Install dependencies
+
 pip install -r requirements.txt
-▶️ Run Application
+
+---
+
+## Running the Application
+
+Run the following command:
+
 streamlit run app.py
 
-Application launches at:
+The application will be available at:
 
 http://localhost:8501
-📈 Forecasting Models
-Model	Purpose
-Prophet	Trend Forecasting
-ARIMA	Statistical Forecasting
-LSTM	Deep Learning Forecasting
-📊 Dashboard Modules
-Module	Description
-Home	Project Overview
-Live Prices	Real-time Crypto Market Data
-EDA	Data Visualization & Insights
-Forecasting	Future Price Prediction
-Sentiment	News & Social Media Analysis
-Model Comparison	Forecast Performance Comparison
-🔍 Future Enhancements
-Portfolio Management System
-Cryptocurrency Recommendation Engine
-Advanced Deep Learning Models
-Multi-Coin Forecasting
-User Authentication
-Cloud Deployment
-Trading Signal Generation
-AI-Powered Chat Assistant
-🎓 Academic Relevance
+
+---
+
+## Dashboard Modules
+
+1. Home Dashboard
+   - Project overview
+   - System introduction
+   - Navigation hub
+
+2. Live Prices
+   - Real-time cryptocurrency tracking
+   - Market statistics
+   - Price updates
+
+3. Exploratory Data Analysis (EDA)
+   - Historical data analysis
+   - Correlation analysis
+   - Visual insights
+
+4. Forecasting
+   - Prophet predictions
+   - ARIMA forecasts
+   - LSTM forecasts
+
+5. Sentiment Analysis
+   - News sentiment evaluation
+   - Market mood assessment
+   - NLP-based insights
+
+6. Model Comparison
+   - Compare model performance
+   - Accuracy analysis
+   - Forecast evaluation
+
+---
+
+## Future Enhancements
+
+- Portfolio management system
+- Multi-cryptocurrency forecasting
+- Advanced deep learning models
+- User authentication system
+- Cloud deployment
+- Trading signal generation
+- AI-powered recommendation engine
+- Mobile application support
+
+---
+
+## Learning Outcomes
 
 This project demonstrates practical implementation of:
 
-Data Analytics
-Machine Learning
-Deep Learning
-Time Series Forecasting
-Natural Language Processing
-Dashboard Development
-API Integration
-Data Visualization
+- Data Analytics
+- Data Visualization
+- Machine Learning
+- Deep Learning
+- Time Series Forecasting
+- Natural Language Processing
+- API Integration
+- Dashboard Development
+- Real-Time Data Processing
 
-Suitable for:
+---
 
-MCA Major Project
-Data Analytics Project
-Machine Learning Project
-Final Year Academic Project
-👨‍💻 Developer
+## Academic Relevance
+
+CryptoLens is developed as an MCA Major Project to showcase the integration of modern data analytics and machine learning techniques in the cryptocurrency domain.
+
+The project combines:
+- Real-Time Analytics
+- Predictive Modeling
+- Artificial Intelligence
+- Data Visualization
+- NLP Techniques
+
+into a single end-to-end application.
+
+---
+
+## Developer
 
 Raghav Gupta
 
-MCA Student | Data Analytics Enthusiast | Machine Learning Learner
+MCA Student
+Aspiring Data Analyst and Machine Learning Enthusiast
 
-Skills
-Python
-SQL
-Power BI
-Tableau
-Machine Learning
-Data Analytics
-Streamlit
+Skills:
+- Python
+- SQL
+- Power BI
+- Tableau
+- Machine Learning
+- Data Analytics
+- Streamlit
 
-📜 License
+---
 
-This project is developed for educational and academic purposes.
+## License
 
-⭐ If you found this project useful, consider giving it a star on GitHub!
+This project is developed for educational and academic purposes only.
