@@ -53,6 +53,7 @@ Forecast comparison
 Accuracy evaluation
 Performance metrics visualization
 🏗️ System Architecture
+
                  ┌─────────────────┐
                  │   Binance API   │
                  └────────┬────────┘
@@ -75,6 +76,7 @@ Performance metrics visualization
            ┌─────────────────────┐
            │ Streamlit Dashboard │
            └─────────────────────┘
+           
 🛠️ Technologies Used
 Frontend
 Streamlit
@@ -101,6 +103,7 @@ VaderSentiment
 APIs
 Binance API
 News API (Optional)
+
 📂 Project Structure
 CryptoLens/
 │
@@ -213,6 +216,7 @@ Tableau
 Machine Learning
 Data Analytics
 Streamlit
+
 📜 License
 
 This project is developed for educational and academic purposes.
